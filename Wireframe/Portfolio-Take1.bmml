@@ -247,7 +247,7 @@
       <controlProperties>
         <color>15658734</color>
         <size>11</size>
-        <text>On%20hover%2C%20image%20image%20will%20go%20modal%20and%20foregroud%20text%20will%20take%20focus.%20Clicking%20on%20the%20image%20will%20bring%20up%20a%20modal%20dialog%20discussing%20the%20image.%0A%20%0ANot%20sure%20if%20there%20should%20be%20a%20gap%20between%20images%2C%20or%20if%20they%20should%20meld%20together%20in%20one%20fluid%20flow.</text>
+        <text>On%20hover%2C%20image%20will%20go%20modal%20and%20foregroud%20text%20will%20take%20focus.%20Clicking%20on%20the%20image%20will%20bring%20up%20a%20modal%20dialog%20discussing%20the%20image.%0A%20%0ANot%20sure%20if%20there%20should%20be%20a%20gutter%20between%20images%2C%20or%20if%20they%20should%20meld%20together%20in%20one%20fluid%20flow.</text>
       </controlProperties>
     </control>
     <control controlID="71" controlTypeID="com.balsamiq.mockups::Arrow" x="162" y="525" w="118" h="92" measuredW="150" measuredH="100" zOrder="38" locked="false" isInGroup="-1">
@@ -291,11 +291,11 @@
         <borderColor>16777215</borderColor>
       </controlProperties>
     </control>
-    <control controlID="83" controlTypeID="com.balsamiq.mockups::StickyNote" x="788" y="65" w="129" h="69" measuredW="109" measuredH="123" zOrder="41" locked="false" isInGroup="-1">
+    <control controlID="83" controlTypeID="com.balsamiq.mockups::StickyNote" x="770" y="65" w="147" h="67" measuredW="109" measuredH="123" zOrder="41" locked="false" isInGroup="-1">
       <controlProperties>
         <color>15658734</color>
         <size>11</size>
-        <text>Social%20links%20will%20be%20dimmed%20and%20will%20pop-light%20when%20hovered</text>
+        <text>Social%20links%20will%20be%20dimmed%20and%20will%20pop-light%20when%20hovered.</text>
       </controlProperties>
     </control>
     <control controlID="84" controlTypeID="com.balsamiq.mockups::Arrow" x="900" y="34" w="53" h="46" measuredW="150" measuredH="100" zOrder="42" locked="false" isInGroup="-1">
@@ -306,7 +306,7 @@
         <text/>
       </controlProperties>
     </control>
-    <control controlID="85" controlTypeID="com.balsamiq.mockups::StickyNote" x="968" y="199" w="109" h="103" measuredW="109" measuredH="123" zOrder="43" locked="false" isInGroup="-1">
+    <control controlID="85" controlTypeID="com.balsamiq.mockups::StickyNote" x="962" y="199" w="115" h="92" measuredW="109" measuredH="123" zOrder="43" locked="false" isInGroup="-1">
       <controlProperties>
         <color>15658734</color>
         <size>11</size>
@@ -334,6 +334,12 @@
     <control controlID="89" controlTypeID="com.balsamiq.mockups::Image" x="280" y="321" w="260" h="260" measuredW="77" measuredH="79" zOrder="47" locked="false" isInGroup="-1">
       <controlProperties>
         <text/>
+      </controlProperties>
+    </control>
+    <control controlID="90" controlTypeID="com.balsamiq.mockups::StickyNote" x="302" y="291" w="190" h="219" measuredW="109" measuredH="123" zOrder="50" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>16767334</color>
+        <text>This%20layout%20has%20a%20simple%20sidebar%20for%20easy%20navigation.%20Since%20the%20eye%20tends%20to%20see%20the%20upper%20left%20side%20of%20the%20page%20first%2C%20having%20the%20navigation%20here%20would%20give%20the%20user%20a%20quick%20understanding%20of%20the%20page.%0A%20%0AI%27m%20looking%20for%20subdued%20tones%2C%20lots%20of%20negative%20space%2C%20large%20fonts%2C%20no%20clutter.</text>
       </controlProperties>
     </control>
   </controls>
