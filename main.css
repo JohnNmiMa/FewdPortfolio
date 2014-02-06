@@ -1,0 +1,103 @@
+body {
+	font-family: 'AvenirNext-Regular', Helvetica, sans-serif;
+}
+
+header {
+	font-size: 1.6rem;
+}
+
+	.top {
+		height: 30px;
+	}
+		.top ul li {
+			float:right;
+			width:25px;
+			height:25px;
+			margin-left:10px;
+			line-height: 30px;
+			text-transform: uppercase;
+			font-size: 62.5%;
+			text-align:center;
+		}
+		.top ul li a {
+			text-decoration: none;
+			color:#444;
+		}
+		.top ul li a i {
+			font-size:1.2em;
+			opacity: 0.3;
+		}
+		.top ul li a i:hover {
+			font-size:1.4em;
+			opacity: 1;
+			color:#41b7d8;
+		}
+
+		.top ul li.mailButton {
+			margin-right:30px;
+		}
+
+
+	.navigator {
+		margin: 45px 0 25px 0;
+		color:#444;
+		line-height:35px;
+	}
+		.name {
+			bottom:0;
+			font-family: 'AvenirNext-UltraLight', Helvetica, sans-serif;
+			font-size: 1.2em;
+			text-transform: uppercase;
+			text-decoration: none;
+			color:inherit;
+			vertical-align:middle;
+		}
+		.name:hover {
+			color:#41b7d8;
+		}
+		.name span {
+			font-family: 'AvenirNext-DemiBold', Helvetica, sans-serif;
+		}
+
+		ul.menu {
+			float:right;
+			font-size:0.5em;
+			font-weight:600;
+			text-transform: uppercase;
+		}
+		ul.menu li {
+			display:inline-block;
+			margin-left:12px;
+			line-height:35px;
+			vertical-align:middle;
+		}
+		ul.menu li a {
+			color:inherit;
+			text-decoration: none;
+		}
+		ul.menu li a:hover {
+			color:#41b7d8;
+		}
+
+.container {
+	margin:0 auto;
+	min-width:420px;
+	max-width:700px;
+}
+
+.content {
+	margin:auto;
+}
+
+	.content .title {
+		padding: 15px 15px 10px 23px;
+		border-left: 7px solid #eee;
+		margin: 40px -30px 30px -30px;
+		font-size:1.1em;
+	}
+
+/* Used to style the jQuery tooptip */
+.ui-tooltip {
+	font-size: 9px;
+}
+
