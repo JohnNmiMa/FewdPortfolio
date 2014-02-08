@@ -40,150 +40,153 @@ header {
 		}
 
 
-	.navigator {
-		margin: 45px 0 25px 0;
-		color:#444;
-		line-height:35px;
-	}
-		.name {
-			bottom:0;
-			font-family: 'AvenirNext-UltraLight', Helvetica, sans-serif;
-			font-size: 1.2em;
-			text-transform: uppercase;
-			text-decoration: none;
-			color:inherit;
-			vertical-align:middle;
-		}
-		.name:hover {
-			color:#41b7d8;
-		}
-		.name span {
-			font-family: 'AvenirNext-DemiBold', Helvetica, sans-serif;
-		}
-
-		ul.menu {
-			float:right;
-			font-size:0.55em;
-			font-weight:700;
-			text-transform: uppercase;
-		}
-		ul.menu li {
-			display:inline-block;
-			margin-left:12px;
-			line-height:35px;
-			vertical-align:middle;
-		}
-		ul.menu li a {
-			color:inherit;
-			text-decoration: none;
-		}
-		ul.menu li a:hover {
-			color:#41b7d8;
-		}
-
-.container {
-	min-width:430px;
-	height:100%;
-}
-@media screen and (min-width: 0px) {
 	.container {
-		margin:0 auto;
-		max-width:600px;
-	}
-}
-@media screen and (min-width: 600px) {
-	.container {
-		margin:0 5%;
-		max-width:100%;
-	}
-}
-
-.content {
-}
-
-	.content .title {
-		padding: 10px 15px 10px 23px;
-		border-left: 7px solid #eee;
-		margin: 40px -30px 30px -30px;
-		font-size:1.1em;
-	}
-
-	#grid {
-	}
-
-	#grid .proj {
-		position:relative;
-		/*display:inline-block;*/
-		float:left;
-		overflow:hidden;
-		height:auto;
-		vertical-align:top;
-		line-height:0;
+		min-width:430px;
+		height:100%;
 	}
 	@media screen and (min-width: 0px) {
-		.proj {
-			width:100%;
+		.container {
+			margin:0 auto;
+			max-width:600px;
 		}
 	}
 	@media screen and (min-width: 600px) {
-		.proj {
-			width:50%;
-		}
-	}
-	@media screen and (min-width: 900px) {
-		.proj {
-			width:33.33332%;
-		}
-	}
-	@media screen and (min-width: 1200px) {
-		.proj {
-			width:25%;
+		.container {
+			margin:0 5%;
+			max-width:100%;
 		}
 	}
 
-		#grid .proj a {
-			height: 100%;
+		.navigator {
+			margin: 45px 0 25px 0;
+			color:#444;
+			line-height:35px;
 		}
-
-			#grid .proj a .imgContainer {
-				position:relative;
-				/*Man, I struggled with this. Adding the padding makes it all work!*/
-				padding-bottom: 100%;
+			.name {
+				bottom:0;
+				font-family: 'AvenirNext-UltraLight', Helvetica, sans-serif;
+				font-size: 1.2em;
+				text-transform: uppercase;
+				text-decoration: none;
+				color:inherit;
+				vertical-align:middle;
 			}
-				#grid #quizalator a .imgContainer {
-					/*padding-bottom: 150%;*/
-				}
+			.name:hover {
+				color:#41b7d8;
+			}
+			.name span {
+				font-family: 'AvenirNext-DemiBold', Helvetica, sans-serif;
+			}
 
-				#grid #stockportfolio a .imgContainer img {
-					background-image: url('images/dog.jpg'); left:-1px; top:-1px;
+			ul.menu {
+				float:right;
+				font-size:0.55em;
+				font-weight:700;
+				text-transform: uppercase;
+			}
+			ul.menu li {
+				display:inline-block;
+				margin-left:12px;
+				line-height:35px;
+				vertical-align:middle;
+			}
+			ul.menu li a {
+				color:inherit;
+				text-decoration: none;
+			}
+			ul.menu li a:hover {
+				color:#41b7d8;
+			}
+
+	.content {
+	}
+
+		.content .title {
+			padding: 10px 15px 10px 23px;
+			border-left: 7px solid #eee;
+			margin: 40px -30px 30px -30px;
+			font-size:1.1em;
+		}
+
+		#grid {
+			height:100%;
+			overflow:hidden;
+		}
+
+		#grid .proj {
+			position:relative;
+			/*display:inline-block;*/
+			float:left;
+			overflow:hidden;
+			height:auto;
+			vertical-align:top;
+			line-height:0;
+		}
+		@media screen and (min-width: 0px) {
+			.proj {
+				width:100%;
+			}
+		}
+		@media screen and (min-width: 600px) {
+			.proj {
+				width:50%;
+			}
+		}
+		@media screen and (min-width: 900px) {
+			.proj {
+				width:33.33332%;
+			}
+		}
+		@media screen and (min-width: 1200px) {
+			.proj {
+				width:25%;
+			}
+		}
+
+			#grid .proj a {
+				height: 100%;
+			}
+
+				#grid .proj a .imgContainer {
+					position:relative;
+					/*border:6px solid white;*/
+					/*Man, I struggled with this. Adding the padding makes it all work!*/
+					padding-bottom: 100%;
 				}
-				#grid #quizalator a .imgContainer img {
-					background-image: url('images/redwoods.jpg'); left:-1px; top:-1px;
-				}
-				#grid #shoppinglist a .imgContainer img {
-					background-image: url('images/beach.jpg'); left:-1px; top:-1px;
-				}
-				#grid #hotorcold a .imgContainer img {
-					background-image: url('images/surfing.jpg'); left:-1px; top:-1px;
-				}
-				#grid #tssignals a .imgContainer img {
-					background-image: url('images/cat.jpg'); left:-1px; top:-1px;
-				}
-				#grid #googleclone a .imgContainer img {
-					background-image: url('images/mountains.jpg'); left:-1px; top:-1px;
-				}
-				#grid .proj a .imgContainer img {
-					position:absolute;
-					/* Man, discovering how to remove the border around the backgroun
-					 * images was tough. The following two lines did the trick */
-					top:-1;
-					left:-1;
-					z-index:4;
-					background-repeat: no-repeat;
-					background-size: cover;
-					width:102%;
-					height:102%;
-				}
+					#grid #quizalator a .imgContainer {
+						/*padding-bottom: 150%;*/
+					}
+
+					#grid #stockportfolio a .imgContainer img {
+						background-image: url('images/dog.jpg'); left:-1px; top:-1px;
+					}
+					#grid #quizalator a .imgContainer img {
+						background-image: url('images/redwoods.jpg'); left:-1px; top:-1px;
+					}
+					#grid #shoppinglist a .imgContainer img {
+						background-image: url('images/beach.jpg'); left:-1px; top:-1px;
+					}
+					#grid #hotorcold a .imgContainer img {
+						background-image: url('images/surfing.jpg'); left:-1px; top:-1px;
+					}
+					#grid #tssignals a .imgContainer img {
+						background-image: url('images/cat.jpg'); left:-1px; top:-1px;
+					}
+					#grid #googleclone a .imgContainer img {
+						background-image: url('images/mountains.jpg'); left:-1px; top:-1px;
+					}
+					#grid .proj a .imgContainer img {
+						position:absolute;
+						/* Man, discovering how to remove the border around the backgroun
+						 * images was tough. The following two lines did the trick */
+						top:-1;
+						left:-1;
+						z-index:4;
+						background-repeat: no-repeat;
+						background-size: cover;
+						width:107%;
+						height:107%;
+					}
 
 /* Used to style the jQuery tooptip */
 .ui-tooltip {
