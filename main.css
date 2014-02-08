@@ -122,6 +122,9 @@ header {
 			vertical-align:top;
 			line-height:0;
 		}
+		#grid .proj:hover {
+			transition: height .3 ease in;
+		}
 		@media screen and (min-width: 0px) {
 			.proj {
 				width:100%;
@@ -158,13 +161,14 @@ header {
 					}
 
 					#grid #stockportfolio a .imgContainer img {
-						background-image: url('images/dog.jpg'); left:-1px; top:-1px;
+						background-image: url('images/beach.jpg'); left:-1px; top:-1px;
+						/*background-position: 50%, 0;*/
 					}
 					#grid #quizalator a .imgContainer img {
 						background-image: url('images/redwoods.jpg'); left:-1px; top:-1px;
 					}
 					#grid #shoppinglist a .imgContainer img {
-						background-image: url('images/beach.jpg'); left:-1px; top:-1px;
+						background-image: url('images/dog.jpg'); left:-1px; top:-1px;
 					}
 					#grid #hotorcold a .imgContainer img {
 						background-image: url('images/surfing.jpg'); left:-1px; top:-1px;
@@ -173,19 +177,21 @@ header {
 						background-image: url('images/cat.jpg'); left:-1px; top:-1px;
 					}
 					#grid #googleclone a .imgContainer img {
-						background-image: url('images/mountains.jpg'); left:-1px; top:-1px;
+						background-image: url('images/mountains.jpg'); right:0; top:-1px;
 					}
 					#grid .proj a .imgContainer img {
 						position:absolute;
-						/* Man, discovering how to remove the border around the backgroun
+						/* Man, discovering how to remove the border around the background
 						 * images was tough. The following two lines did the trick */
 						top:-1;
 						left:-1;
 						z-index:4;
 						background-repeat: no-repeat;
 						background-size: cover;
-						width:107%;
-						height:107%;
+						width:102%;
+						height:102%;
+						/*transform: scale3d(1.01, 1.01, 1.01);*/
+						/*-webkit-transform: scale3d(1.01, 1.01, 1.01);*/
 					}
 
 /* Used to style the jQuery tooptip */
