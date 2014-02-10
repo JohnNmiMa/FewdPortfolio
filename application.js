@@ -1,17 +1,6 @@
-var Utils = {}
-Utils.Constructor = function() {
-}
-Utils.Constructor.prototype.isNumeric = function(n) {
-	  return !isNaN(parseFloat(n)) && isFinite(n);
-}
-Utils.Constructor.prototype.numberWithCommas = function(x) {
-    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-}
-
-
 // Module Pattern
 var imageAnimator = (function() {
-	// 'this' is a jQuery object - please
+
 	var zoomtran = function(xoffset, yoffset, zoom, duration) {
 		// Zoom into the picture and translate image to desired location on hover
 		var scalestr = "scale3d("+zoom+", "+zoom+", "+zoom+")";
@@ -26,49 +15,69 @@ var imageAnimator = (function() {
 		this.css("-webkit-transition-timing-function", "ease-out");
 	}
 
+	var displayOverlay = function(display) {
+		if (display)
+			this.css('visibility', 'visible');
+		else
+			this.css('visibility', 'hidden');
+	}
+
 	return {
-		zoomtran:zoomtran
+		zoomtran:zoomtran,
+		displayOverlay:displayOverlay
 	};
 })();
 
 
 $(document).ready(function() {
 
+	var indata = {},
+		outdata = {xoff:'0',yoff:'0',zoom:'1.01',duration:'0.4'};
+
+	// Initialize the ovelay window size to its parent/grid size
+	$("#grid .proj").mouseenter(function() {
+		$(this).find('a').width($(this).width()).height($(this).height());
+	}).trigger('mouseenter');
+
+	function hoverin(event) {
+		var xoff = event.data.xoff,
+	        yoff = event.data.yoff,
+	        zoom = event.data.zoom,
+	        dur  = event.data.duration;
+		imageAnimator.zoomtran.call($(this).find('.image'), xoff, yoff, zoom, dur);
+		imageAnimator.displayOverlay.call($(this).find('a'), true);
+	}
+	function hoverout(event) {
+		var xoff = event.data.xoff,
+	        yoff = event.data.yoff,
+	        zoom = event.data.zoom,
+	        dur  = event.data.duration;
+		imageAnimator.zoomtran.call($(this).find('.image'), xoff, yoff, zoom, dur);
+		imageAnimator.displayOverlay.call($(this).find('a'), false);
+	}
+	
 	// General image affine translation
-	$("#grid .proj a .imgContainer img").mouseenter(function() {
-		imageAnimator.zoomtran.call($(this), 0, 0, 1.5, 0.4);
-	});
-	$("#grid .proj a .imgContainer img").mouseout(function() {
-		imageAnimator.zoomtran.call($(this), 0, 0, 1.01, 0.3);
-	}).trigger('mouseout'); // Force the mouseout state at startup
+	$("#grid .proj").on('mouseleave',outdata,hoverout).trigger('mouseleave');
 
 	// Image specific translations
-	$("#grid #stockportfolio a .imgContainer img").mouseenter(function() {
-		imageAnimator.zoomtran.call($(this), 55, 10, 1.5, 0.4);
-	});
+	indata = {xoff:'55',yoff:'10',zoom:'1.5',duration:'0.4'};
+	$("#grid #stockportfolio").on('mouseenter',indata,hoverin);
 
-	$("#grid #quizalator a .imgContainer img").mouseenter(function() {
-		imageAnimator.zoomtran.call($(this), 0, 100, 1.5, 0.4);
-	});
+	indata = {xoff:'0',yoff:'100',zoom:'1.5',duration:'0.4'};
+	$("#grid #quizalator").on('mouseenter',indata,hoverin);
 
-	$("#grid #shoppinglist a .imgContainer img").mouseenter(function() {
-		imageAnimator.zoomtran.call($(this), 50, 0, 1.5, 0.4);
-	});
+	indata = {xoff:'50',yoff:'0',zoom:'1.5',duration:'0.4'};
+	$("#grid #shoppinglist").on('mouseenter',indata,hoverin);
 	
-	$("#grid #hotorcold a .imgContainer img").mouseenter(function() {
-		imageAnimator.zoomtran.call($(this), 60, -10, 1.5, 0.4);
-	});
+	indata = {xoff:'60',yoff:'-10',zoom:'1.5',duration:'0.4'};
+	$("#grid #hotorcold").on('mouseenter',indata,hoverin);
 	
-	$("#grid #tssignals a .imgContainer img").mouseenter(function() {
-		//imageAnimator.zoomtran.call($(this), 0, 0, 1.5, 0.4);
-	});
+	indata = {xoff:'0',yoff:'0',zoom:'1.5',duration:'0.4'};
+	$("#grid #tssignals").on('mouseenter',indata,hoverin);
 	
-	$("#grid #googleclone a .imgContainer img").mouseenter(function() {
-		imageAnimator.zoomtran.call($(this), 0, 0, 1.5, 0.4);
-	});
-	$("#grid #googleclone a .imgContainer img").mouseout(function() {
-		imageAnimator.zoomtran.call($(this), 100, 0, 1.01, 0.4);
-	}).trigger('mouseout');
+	indata = {xoff:'0',yoff:'0',zoom:'1.5',duration:'0.4'};
+	var outdata2 = {xoff:'100',yoff:'0',zoom:'1.01',duration:'0.4'};
+	$("#grid #googleclone").on('mouseenter',indata,hoverin).on('mouseleave',outdata2,hoverout).trigger('mouseleave');
 
 	// jQuery UI code for tooltips
 	$(document).tooltip();
