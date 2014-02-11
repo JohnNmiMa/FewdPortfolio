@@ -74,9 +74,9 @@ header {
 			.name:hover {
 				color:#41b7d8;
 			}
-			.name span {
-				font-family: 'AvenirNext-DemiBold', Helvetica, sans-serif;
-			}
+				.name span {
+					font-family: 'AvenirNext-DemiBold', Helvetica, sans-serif;
+				}
 
 			ul.menu {
 				float:right;
@@ -84,19 +84,19 @@ header {
 				font-weight:700;
 				text-transform: uppercase;
 			}
-			ul.menu li {
-				display:inline-block;
-				margin-left:12px;
-				line-height:35px;
-				vertical-align:middle;
-			}
-			ul.menu li a {
-				color:inherit;
-				text-decoration: none;
-			}
-			ul.menu li a:hover {
-				color:#41b7d8;
-			}
+				ul.menu li {
+					display:inline-block;
+					margin-left:12px;
+					line-height:35px;
+					vertical-align:middle;
+				}
+					ul.menu li a {
+						color:inherit;
+						text-decoration: none;
+					}
+					ul.menu li a:hover {
+						color:#41b7d8;
+					}
 
 	#work.content {
 	}
@@ -109,18 +109,13 @@ header {
 		}
 
 		#grid {
-			height:100%;
 			overflow:hidden;
 		}
 
 		#grid .proj {
 			position:relative;
-			display:inline-block;
 			float:left;
 			overflow:hidden;
-			height:100%;
-			vertical-align:top;
-			line-height:0;
 		}
 		#grid .proj:hover {
 			transition: height .3 ease in;
@@ -149,14 +144,11 @@ header {
 		#grid .proj .imgContainer {
 			position:relative;
 			z-index:3;
-			height:100%;
-			width:100%;
 			/*Man, I struggled with this. Adding the padding makes it all work!*/
 			padding-bottom: 100%;
 		}
 			#grid #stockportfolio .imgContainer .image {
 				background-image: url('images/beach.jpg');
-				/*background-position: 50%, 0;*/
 			}
 			#grid #quizalator .imgContainer .image {
 				background-image: url('images/redwoods.jpg');
@@ -183,35 +175,37 @@ header {
 				background-size: cover;
 				width:102%;
 				height:102%;
-				vertical-align:middle;
+				-webkit-transition-property: -webkit-transform background-position;
+				-webkit-transition-duration: 0.4s;
+				-webkit-transition-timing-function: ease-out;
 			}
 
 		/* This is the overlay that lies on top of the image. By default it is shown as 
 		 * hidden, and becomes visible when hovered over.*/
-		#grid .proj a {
+		#grid .proj a.overlay {
 			position:absolute;
-			top:0;
-			left:0;
 			z-index:5;
 			text-decoration: none;
 			visibility:hidden;
+			background-color: rgba(0,0,0, 0);
+			-webkit-transition: background-color 0.4s linear;
 		}
 
-			/*
-			 * This overlay is always over the image. By default it is shown as 
-			 * transparent, and opaque when hovered over.*/
-			#grid .proj a .overlay {
-				position:absolute;
-				width:100%;
-				height:100%;
+			#grid .proj a.overlay .description {
+				vertical-align:middle;
 				text-align:center;
-				line-height:30px;
-				background: rgba(0,0,0, 0.6);
 			}
 			
-				#grid .proj a .overlay .projectTitle {
-					margin-top: 40%;
-					color:#fff;
+				#grid .proj a.overlay .description h2 {
+					font-size:1.0em;
+					line-height:30px;
+					color:#ccc;
+					-webkit-transition: font-size 0.4s linear;
+				}
+				#grid .proj a.overlay .description h4 {
+					font-size:1.0em;
+					line-height:24px;
+					color:#ccc;
 				}
 
 /* Used to style the jQuery tooptip */
