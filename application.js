@@ -17,7 +17,10 @@ var imageAnimator = (function() {
 		} else {
 			// Make the overlay hidden and brighten the background
 			this.css("background-color", "rgba(0,0,0, 0.0)");
-			this.css('visibility', 'hidden');
+			var delayobj = this;
+			setTimeout(function() {
+				delayobj.css('visibility', 'hidden');
+			}, 200);
 		}
 	}
 

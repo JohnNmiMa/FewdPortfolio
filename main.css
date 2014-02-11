@@ -199,7 +199,7 @@ header {
 				#grid .proj a.overlay .description h2 {
 					font-size:0.9em;
 					line-height:30px;
-					color:#ccc;
+					color:#fff;
 					-webkit-transition: font-size 0.2s ease-out;
 				}
 				#grid .proj a.overlay .description h4 {
