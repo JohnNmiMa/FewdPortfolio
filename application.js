@@ -60,6 +60,7 @@ $(document).ready(function() {
 		imageAnimator.zoomtran.call($(this).find('.image'), xoff, yoff, zoom, dur);
 		imageAnimator.displayOverlay.call($(this).find('a.overlay'), true);
 		imageAnimator.setFontSize.call($(this).find('a.overlay h2'), 1.5);
+		imageAnimator.setFontSize.call($(this).find('a.overlay h4'), 1.0);
 		imageAnimator.centerOverlayTitle.call($(this).find('.description'));
 	}
 	function hoverout(event) {
@@ -69,6 +70,7 @@ $(document).ready(function() {
 	        dur  = event.data.duration;
 		imageAnimator.zoomtran.call($(this).find('.image'), xoff, yoff, zoom, dur);
 		imageAnimator.setFontSize.call($(this).find('a.overlay h2'), 1.0);
+		imageAnimator.setFontSize.call($(this).find('a.overlay h4'), 0.7);
 		imageAnimator.displayOverlay.call($(this).find('a.overlay'), false);
 	}
 	
