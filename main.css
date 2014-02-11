@@ -9,11 +9,13 @@ header {
 	.top {
 		height: 30px;
 	}
-		.top ul li {
+		.top ul {
 			float:right;
+		}
+		.top ul li {
+			display:inline-block;
 			width:25px;
 			height:25px;
-			margin-left:10px;
 			line-height: 30px;
 			text-transform: uppercase;
 			font-size: 62.5%;
@@ -38,63 +40,173 @@ header {
 		}
 
 
-	.navigator {
-		margin: 45px 0 25px 0;
-		color:#444;
-		line-height:35px;
+	.container {
+		min-width:430px;
+		height:100%;
 	}
-		.name {
-			bottom:0;
-			font-family: 'AvenirNext-UltraLight', Helvetica, sans-serif;
-			font-size: 1.2em;
-			text-transform: uppercase;
-			text-decoration: none;
-			color:inherit;
-			vertical-align:middle;
+	@media screen and (min-width: 0px) {
+		.container {
+			margin:0 auto;
+			max-width:600px;
 		}
-		.name:hover {
-			color:#41b7d8;
+	}
+	@media screen and (min-width: 600px) {
+		.container {
+			margin:0 5%;
+			max-width:100%;
 		}
-		.name span {
-			font-family: 'AvenirNext-DemiBold', Helvetica, sans-serif;
-		}
+	}
 
-		ul.menu {
-			float:right;
-			font-size:0.5em;
-			font-weight:600;
-			text-transform: uppercase;
-		}
-		ul.menu li {
-			display:inline-block;
-			margin-left:12px;
+		.navigator {
+			margin: 45px 0 25px 0;
+			color:#444;
 			line-height:35px;
-			vertical-align:middle;
 		}
-		ul.menu li a {
-			color:inherit;
-			text-decoration: none;
-		}
-		ul.menu li a:hover {
-			color:#41b7d8;
-		}
+			.name {
+				bottom:0;
+				font-family: 'AvenirNext-UltraLight', Helvetica, sans-serif;
+				font-size: 1.2em;
+				text-transform: uppercase;
+				text-decoration: none;
+				color:inherit;
+				vertical-align:middle;
+			}
+			.name:hover {
+				color:#41b7d8;
+			}
+				.name span {
+					font-family: 'AvenirNext-DemiBold', Helvetica, sans-serif;
+				}
 
-.container {
-	margin:0 auto;
-	min-width:420px;
-	max-width:700px;
-}
+			ul.menu {
+				float:right;
+				font-size:0.55em;
+				font-weight:700;
+				text-transform: uppercase;
+			}
+				ul.menu li {
+					display:inline-block;
+					margin-left:12px;
+					line-height:35px;
+					vertical-align:middle;
+				}
+					ul.menu li a {
+						color:inherit;
+						text-decoration: none;
+					}
+					ul.menu li a:hover {
+						color:#41b7d8;
+					}
 
-.content {
-	margin:auto;
-}
-
-	.content .title {
-		padding: 15px 15px 10px 23px;
-		border-left: 7px solid #eee;
-		margin: 40px -30px 30px -30px;
-		font-size:1.1em;
+	#work.content {
 	}
+
+		#work.content .title {
+			padding: 10px 15px 10px 23px;
+			border-left: 7px solid #eee;
+			margin: 40px -30px 30px -30px;
+			font-size:1.1em;
+		}
+
+		#grid {
+			overflow:hidden;
+		}
+
+		#grid .proj {
+			position:relative;
+			float:left;
+			overflow:hidden;
+		}
+		#grid .proj:hover {
+			transition: height .3 ease in;
+		}
+		@media screen and (min-width: 0px) {
+			.proj {
+				width:100%;
+			}
+		}
+		@media screen and (min-width: 600px) {
+			.proj {
+				width:50%;
+			}
+		}
+		@media screen and (min-width: 900px) {
+			.proj {
+				width:33.33332%;
+			}
+		}
+		@media screen and (min-width: 1200px) {
+			.proj {
+				width:25%;
+			}
+		}
+
+		#grid .proj .imgContainer {
+			position:relative;
+			z-index:3;
+			/*Man, I struggled with this. Adding the padding makes it all work!*/
+			padding-bottom: 100%;
+		}
+			#grid #stockportfolio .imgContainer .image {
+				background-image: url('images/beach.jpg');
+			}
+			#grid #quizalator .imgContainer .image {
+				background-image: url('images/redwoods.jpg');
+			}
+			#grid #shoppinglist .imgContainer .image {
+				background-image: url('images/dog.jpg');
+			}
+			#grid #hotorcold .imgContainer .image {
+				background-image: url('images/surfing.jpg');
+			}
+			#grid #tssignals .imgContainer .image {
+				background-image: url('images/cat.jpg');
+			}
+			#grid #googleclone .imgContainer .image {
+				background-image: url('images/mountains.jpg');
+			}
+			#grid .proj .image {
+				position:absolute;
+				/* Man, discovering how to remove the border around the background
+				 * images was tough. The following two lines did the trick */
+				top:-1;
+				left:-1;
+				background-repeat: no-repeat;
+				background-size: cover;
+				width:102%;
+				height:102%;
+				-webkit-transition-property: -webkit-transform background-position;
+				-webkit-transition-duration: 0.4s;
+				-webkit-transition-timing-function: ease-out;
+			}
+
+		/* This is the overlay that lies on top of the image. By default it is shown as 
+		 * hidden, and becomes visible when hovered over.*/
+		#grid .proj a.overlay {
+			position:absolute;
+			z-index:5;
+			text-decoration: none;
+			visibility:hidden;
+			background-color: rgba(0,0,0, 0);
+			-webkit-transition: background-color 0.4s linear;
+		}
+
+			#grid .proj a.overlay .description {
+				vertical-align:middle;
+				text-align:center;
+			}
+			
+				#grid .proj a.overlay .description h2 {
+					font-size:1.0em;
+					line-height:30px;
+					color:#ccc;
+					-webkit-transition: font-size 0.4s linear;
+				}
+				#grid .proj a.overlay .description h4 {
+					font-size:1.0em;
+					line-height:24px;
+					color:#ccc;
+				}
 
 /* Used to style the jQuery tooptip */
 .ui-tooltip {

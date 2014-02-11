@@ -1,0 +1,8 @@
+Create Wireframe - DONE
+Create initial framework - DONE
+Understand how to display images in a grid
+Work on Experience (Experience & Academics)
+  * Create chart showing experience over time
+Work on Skills
+Call Katy and show. Get feedback.
+
