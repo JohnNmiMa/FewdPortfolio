@@ -118,7 +118,7 @@ header {
 			overflow:hidden;
 		}
 		#grid .proj:hover {
-			transition: height .3 ease in;
+			/*transition: height .3 ease in;*/
 		}
 		@media screen and (min-width: 0px) {
 			.proj {
@@ -148,29 +148,35 @@ header {
 			padding-bottom: 100%;
 		}
 			#grid #stockportfolio .imgContainer .image {
-				background-image: url('images/beach.jpg');
+				/*background-image: url('images/beach.jpg');*/
+				background-image: url('images/stockportfolio.png');
 			}
 			#grid #quizalator .imgContainer .image {
-				background-image: url('images/redwoods.jpg');
+				/*background-image: url('images/redwoods.jpg');*/
+				background-image: url('images/quizalator4.png');
 			}
 			#grid #shoppinglist .imgContainer .image {
-				background-image: url('images/dog.jpg');
+				/*background-image: url('images/dog.jpg');*/
+				background-image: url('images/shopping.png');
 			}
 			#grid #hotorcold .imgContainer .image {
-				background-image: url('images/surfing.jpg');
+				/*background-image: url('images/surfing.jpg');*/
+				background-image: url('images/hotorcold.png');
 			}
 			#grid #tssignals .imgContainer .image {
-				background-image: url('images/cat.jpg');
+				/*background-image: url('images/cat.jpg');*/
+				background-image: url('images/37signalsclone.png');
 			}
 			#grid #googleclone .imgContainer .image {
-				background-image: url('images/mountains.jpg');
+				/*background-image: url('images/mountains.jpg');*/
+				background-image: url('images/googleclone.png');
 			}
 			#grid .proj .image {
 				position:absolute;
 				/* Man, discovering how to remove the border around the background
 				 * images was tough. The following two lines did the trick */
-				top:-1;
-				left:-1;
+				top:-1%;
+				left:-1%;
 				background-repeat: no-repeat;
 				background-size: cover;
 				width:102%;

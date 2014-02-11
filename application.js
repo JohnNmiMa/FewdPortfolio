@@ -12,7 +12,7 @@ var imageAnimator = (function() {
 	var displayOverlay = function(display) {
 		if (display) {
 			// Make the overlay visible and darken the background
-			this.css("background-color", "rgba(0,0,0, 0.6)");
+			this.css("background-color", "rgba(0,0,0, 0.5)");
 			this.css('visibility', 'visible');
 		} else {
 			// Make the overlay hidden and brighten the background
@@ -53,7 +53,7 @@ var imageAnimator = (function() {
 $(document).ready(function() {
 
 	var indata = {},
-		outdata = {xoff:'0',yoff:'0',zoom:'1.01',duration:'0.4'};
+		outdata = {xoff:'0',yoff:'0',zoom:'1.01',duration:'0.4'}, outdata2 = {};
 
 	function hoverin(event) {
 		var xoff = event.data.xoff,
@@ -91,23 +91,34 @@ $(document).ready(function() {
 	$("#grid .proj").on('mouseleave',outdata,hoverout).trigger('mouseleave');
 
 	// Image specific affine translations
-	indata = {xoff:'55',yoff:'10',zoom:'1.5',duration:'0.4'};
-	$("#grid #stockportfolio").on('mouseenter',indata,hoverin);
+	//indata = {xoff:'55',yoff:'10',zoom:'1.5',duration:'0.4'};
+	indata = {xoff:'0',yoff:'0',zoom:'1.5',duration:'0.4'};
+	outdata2 = {xoff:'0',yoff:'0',zoom:'1.0',duration:'0.4'};
+	//$("#grid #stockportfolio").on('mouseenter',indata,hoverin);
+	$("#grid #stockportfolio").on('mouseenter',indata,hoverin).on('mouseleave',outdata2,hoverout).trigger('mouseleave');
 
-	indata = {xoff:'0',yoff:'100',zoom:'1.5',duration:'0.4'};
-	$("#grid #quizalator").on('mouseenter',indata,hoverin);
+	//indata = {xoff:'50',yoff:'100',zoom:'1.5',duration:'0.4'};
+	indata = {xoff:'0',yoff:'0',zoom:'1.5',duration:'0.4'};
+	outdata2 = {xoff:'0',yoff:'0',zoom:'1.0',duration:'0.4'};
+	$("#grid #quizalator").on('mouseenter',indata,hoverin).on('mouseleave',outdata2,hoverout).trigger('mouseleave');
 
+	indata = {xoff:'0',yoff:'0',zoom:'1.01',duration:'0.4'};
+	outdata2 = {xoff:'93',yoff:'0',zoom:'1.0',duration:'0.4'};
+	//$("#grid #shoppinglist").on('mouseenter',indata,hoverin);
+	$("#grid #shoppinglist").on('mouseenter',indata,hoverin).on('mouseleave',outdata2,hoverout).trigger('mouseleave');
+	
+	indata = {xoff:'100',yoff:'0',zoom:'1.5',duration:'0.4'};
+	outdata2 = {xoff:'100',yoff:'0',zoom:'1.0',duration:'0.4'};
+	//$("#grid #hotorcold").on('mouseenter',indata,hoverin);
+	$("#grid #hotorcold").on('mouseenter',indata,hoverin).on('mouseleave',outdata2,hoverout).trigger('mouseleave');
+	
 	indata = {xoff:'50',yoff:'0',zoom:'1.5',duration:'0.4'};
-	$("#grid #shoppinglist").on('mouseenter',indata,hoverin);
+	outdata2 = {xoff:'50',yoff:'0',zoom:'1.0',duration:'0.4'};
+	//$("#grid #tssignals").on('mouseenter',indata,hoverin);
+	$("#grid #tssignals").on('mouseenter',indata,hoverin).on('mouseleave',outdata2,hoverout).trigger('mouseleave');
 	
-	indata = {xoff:'60',yoff:'-10',zoom:'1.5',duration:'0.4'};
-	$("#grid #hotorcold").on('mouseenter',indata,hoverin);
-	
-	indata = {xoff:'0',yoff:'0',zoom:'1.5',duration:'0.4'};
-	$("#grid #tssignals").on('mouseenter',indata,hoverin);
-	
-	indata = {xoff:'0',yoff:'0',zoom:'1.5',duration:'0.4'};
-	var outdata2 = {xoff:'100',yoff:'0',zoom:'1.01',duration:'0.4'};
+	indata = {xoff:'50',yoff:'0',zoom:'1.5',duration:'0.4'};
+	outdata2 = {xoff:'50',yoff:'0',zoom:'1.0',duration:'0.4'};
 	$("#grid #googleclone").on('mouseenter',indata,hoverin).on('mouseleave',outdata2,hoverout).trigger('mouseleave');
 
 	// jQuery UI code for tooltips
