@@ -1,0 +1,136 @@
+body {
+	font-family: 'AvenirNext-Regular', Helvetica, sans-serif;
+}
+
+.container {
+	min-width:430px;
+	height:100%;
+}
+@media screen and (min-width: 0px) {
+	.container {
+		margin:0 auto;
+		max-width:600px;
+	}
+}
+@media screen and (min-width: 600px) {
+	.container {
+		margin:0 5%;
+		max-width:100%;
+	}
+}
+
+	#grid {
+		height:100%;
+		overflow:hidden;
+	}
+
+	#grid .proj {
+		position:relative;
+		display:inline-block;
+		float:left;
+		overflow:hidden;
+		height:100%;
+		vertical-align:top;
+		line-height:0;
+	}
+	#grid .proj:hover {
+		transition: height .3 ease in;
+	}
+	@media screen and (min-width: 0px) {
+		.proj {
+			width:100%;
+		}
+	}
+	@media screen and (min-width: 600px) {
+		.proj {
+			width:50%;
+		}
+	}
+	@media screen and (min-width: 900px) {
+		.proj {
+			width:33.33332%;
+		}
+	}
+	@media screen and (min-width: 1200px) {
+		.proj {
+			width:25%;
+		}
+	}
+
+		#grid .proj .imgContainer {
+			position:relative;
+			z-index:3;
+			height:100%;
+			width:100%;
+			/*Man, I struggled with this. Adding the padding makes it all work!*/
+			padding-bottom: 100%;
+		}
+			#grid #stockportfolio .imgContainer .image {
+				background-image: url('images/beach.jpg');
+				/*background-position: 50%, 0;*/
+			}
+			#grid #quizalator .imgContainer .image {
+				background-image: url('images/redwoods.jpg');
+			}
+			#grid #shoppinglist .imgContainer .image {
+				background-image: url('images/dog.jpg');
+			}
+			#grid #hotorcold .imgContainer .image {
+				background-image: url('images/surfing.jpg');
+			}
+			#grid #tssignals .imgContainer .image {
+				background-image: url('images/cat.jpg');
+			}
+			#grid #googleclone .imgContainer .image {
+				background-image: url('images/mountains.jpg');
+			}
+			#grid .proj .image {
+				position:absolute;
+				/* Man, discovering how to remove the border around the background
+				 * images was tough. The following two lines did the trick */
+				top:-1;
+				left:-1;
+				background-repeat: no-repeat;
+				background-size: cover;
+				width:102%;
+				height:102%;
+				vertical-align:middle;
+			}
+
+		/* This is the overlay that lies on top of the image, but only when
+		 * the image has focus. */
+		#grid .proj a {
+			position:absolute;
+			top:0;
+			left:0;
+			z-index:5;
+			text-decoration: none;
+			visibility:hidden;
+		}
+
+			/*
+			 * This overlay is always over the image. But it is shown as 
+			 * transparent, and opaque when hovered over. The mouseenter 
+			 * and mouseout events must be caught right at the 
+			 * ".imgContainer .image" level. If they are caught any higher, 
+			 * then the overlay will cause a mouseout event when the mouse 
+			 * moves over the overlay text. This took me a while to grock.  */
+			#grid .proj a .overlay {
+				position:absolute;
+				width:100%;
+				height:100%;
+				text-align:center;
+				line-height:30px;
+				background: rgba(0,0,0, 0.6);
+			}
+
+				#grid .proj a .overlay .projectTitle {
+					margin-top: 40%;
+					color:#fff;
+				}
+
+/* Used to style the jQuery tooptip */
+.ui-tooltip {
+	font-size: 9px;
+}
+

@@ -1,0 +1,137 @@
+body {
+	font-family: 'AvenirNext-Regular', Helvetica, sans-serif;
+}
+
+	.container {
+		min-width:430px;
+		height:100%;
+	}
+	@media screen and (min-width: 0px) {
+		.container {
+			margin:30px auto;
+			max-width:600px;
+		}
+	}
+	@media screen and (min-width: 600px) {
+		.container {
+			margin:30px 5%;
+			max-width:100%;
+		}
+	}
+
+	#work.content {
+	}
+
+		#work.content #log {
+			margin-bottom: 10px;
+			font-size:1.3em;
+			height:25px;
+		}
+		#work.content #imgSize {
+			margin-bottom: 10px;
+			font-size:1.3em;
+			height:25px;
+		}
+		#work.content #movePercent {
+			margin-bottom: 10px;
+			font-size:1.3em;
+			height:25px;
+		}
+
+		#grid {
+			overflow:hidden;
+		}
+
+		#grid .proj {
+			position:relative;
+			float:left;
+			overflow:hidden;
+		}
+		#grid .proj:hover {
+			/*transition: height .3 ease in;*/
+		}
+		@media screen and (min-width: 0px) {
+			.proj {
+				width:100%;
+			}
+		}
+		@media screen and (min-width: 600px) {
+			.proj {
+				width:50%;
+			}
+		}
+		@media screen and (min-width: 900px) {
+			.proj {
+				width:33.33332%;
+			}
+		}
+		@media screen and (min-width: 1200px) {
+			.proj {
+				width:25%;
+			}
+		}
+
+		#grid .proj .imgContainer {
+			position:relative;
+			z-index:3;
+			/*Man, I struggled with this. Adding the padding makes it all work!*/
+			padding-bottom: 100%;
+		}
+			#grid #image1 .imgContainer .image {
+				background-image: url('../images/beach.jpg');
+				/*background-image: url('images/stockportfolio.png');*/
+			}
+			#grid #image2 .imgContainer .image {
+				background-image: url('../images/redwoods.jpg');
+				/*background-image: url('images/quizalator.png');*/
+			}
+			#grid .proj .image {
+				position:absolute;
+				/* Man, discovering how to remove the border around the background
+				 * images was tough. The following two lines did the trick */
+				top:-1%;
+				left:-1%;
+				background-repeat: no-repeat;
+				background-size: cover;
+				width:102%;
+				height:102%;
+				-webkit-transition-property: background-position background-size;
+				-webkit-transition-duration: 0.4s;
+				-webkit-transition-timing-function: ease-out;
+			}
+
+		/* This is the overlay that lies on top of the image. By default it is shown as 
+		 * hidden, and becomes visible when hovered over.*/
+		#grid .proj a.overlay {
+			position:absolute;
+			z-index:5;
+			text-decoration: none;
+			visibility:hidden;
+			background-color: rgba(0,0,0, 0);
+			-webkit-transition: background-color 0.4s ease-out;
+		}
+
+			#grid .proj a.overlay .description {
+				vertical-align:middle;
+				text-align:center;
+			}
+			
+				#grid .proj a.overlay .description h2 {
+					font-size:0.9em;
+					line-height:30px;
+					color:#fff;
+					-webkit-transition: font-size 0.2s ease-out;
+				}
+				#grid .proj a.overlay .description h4 {
+					font-size:0,9em;
+					font-weight:300;
+					line-height:24px;
+					color:#ccc;
+					-webkit-transition: font-size 0.2s ease-out;
+				}
+
+/* Used to style the jQuery tooptip */
+.ui-tooltip {
+	font-size: 9px;
+}
+

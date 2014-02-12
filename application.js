@@ -1,14 +1,20 @@
 // Module Pattern
 var imageAnimator = (function() {
 
-	var zoomtran = function(xoffset, yoffset, zoom, durationSeconds) {
-		// Zoom into the picture and translate image to desired location
-		var scalestr = "scale3d("+zoom+", "+zoom+", "+zoom+")";
-		this.css("-webkit-transform", scalestr);
+	var zoomtran = function(xoffset, yoffset, zoom) {
+		// Zoom into or out of the image
+		var zoomstr = zoom+"%";
+		if ($(this).hasClass('tall')) {
+			zoomstr = zoomstr + " auto";
+		} else {
+			zoomstr = "auto " + zoomstr;
+		}
+		$(this).css("background-size", zoomstr);
+
+		// Translate the image to the desired location
 		var offsetstr = xoffset+"% "+ yoffset+"%";
 		this.css("background-position", offsetstr);
 	}
-
 	var displayOverlay = function(display) {
 		if (display) {
 			// Make the overlay visible and darken the background
@@ -17,21 +23,21 @@ var imageAnimator = (function() {
 		} else {
 			// Make the overlay hidden and brighten the background
 			this.css("background-color", "rgba(0,0,0, 0.0)");
-			this.css('visibility', 'hidden');
+			var delayobj = this;
+			setTimeout(function() {
+				delayobj.css('visibility', 'hidden');
+			}, 200);
 		}
 	}
-
 	var setOverlaySize = function() {
 		$(this).find('a.overlay').width($(this).width()).height($(this).height());
 	}
-
 	var centerOverlayTitle = function() {
 		var parentHeight = $(this).parent().height();
 		var thisHeight = $(this).height();
 		var topMargin = (parentHeight - thisHeight) / 2;
 		$(this).css('margin-top', topMargin);
 	}
-
 	var setFontSize = function(emsize) {
 		var emstr = emsize+'em';
 		this.css('font-size', emstr);
@@ -50,26 +56,20 @@ var imageAnimator = (function() {
 $(document).ready(function() {
 
 	var indata = {},
-		outdata = {xoff:'0',yoff:'0',zoom:'1.01',duration:'0.4'};
+		outdata = {xoff:'0',yoff:'0',zoom:'100'}, outdata2 = {};
 
-	function hoverin(event) {
-		var xoff = event.data.xoff,
-	        yoff = event.data.yoff,
-	        zoom = event.data.zoom,
-	        dur  = event.data.duration;
-		imageAnimator.zoomtran.call($(this).find('.image'), xoff, yoff, zoom, dur);
-		imageAnimator.displayOverlay.call($(this).find('a.overlay'), true);
-		imageAnimator.setFontSize.call($(this).find('a.overlay h2'), 1.5);
+	function doHover(xoff, yoff, zoom, h2size, h4size, hover) {
+		imageAnimator.zoomtran.call($(this).find('.image'), xoff, yoff, zoom);
+		imageAnimator.displayOverlay.call($(this).find('a.overlay'), hover);
+		imageAnimator.setFontSize.call($(this).find('a.overlay h2'), h2size);
+		imageAnimator.setFontSize.call($(this).find('a.overlay h4'), h4size);
 		imageAnimator.centerOverlayTitle.call($(this).find('.description'));
 	}
+	function hoverin(event,hoverin) {
+		doHover.call(this, event.data.xoff, event.data.yoff, event.data.zoom, 1.5, 1.0, true);
+	}
 	function hoverout(event) {
-		var xoff = event.data.xoff,
-	        yoff = event.data.yoff,
-	        zoom = event.data.zoom,
-	        dur  = event.data.duration;
-		imageAnimator.zoomtran.call($(this).find('.image'), xoff, yoff, zoom, dur);
-		imageAnimator.setFontSize.call($(this).find('a.overlay h2'), 1.0);
-		imageAnimator.displayOverlay.call($(this).find('a.overlay'), false);
+		doHover.call(this, event.data.xoff, event.data.yoff, event.data.zoom, 1.0, 0.7, false);
 	}
 	
 	// Initialize the ovelay window size to its parent/grid size
@@ -86,23 +86,25 @@ $(document).ready(function() {
 	$("#grid .proj").on('mouseleave',outdata,hoverout).trigger('mouseleave');
 
 	// Image specific affine translations
-	indata = {xoff:'55',yoff:'10',zoom:'1.5',duration:'0.4'};
+	indata = {xoff:'0',yoff:'0',zoom:'150'};
 	$("#grid #stockportfolio").on('mouseenter',indata,hoverin);
 
-	indata = {xoff:'0',yoff:'100',zoom:'1.5',duration:'0.4'};
+	indata = {xoff:'50',yoff:'100',zoom:'150'};
 	$("#grid #quizalator").on('mouseenter',indata,hoverin);
 
-	indata = {xoff:'50',yoff:'0',zoom:'1.5',duration:'0.4'};
-	$("#grid #shoppinglist").on('mouseenter',indata,hoverin);
+	indata = {xoff:'0',yoff:'0',zoom:'100'};
+	outdata2 = {xoff:'93',yoff:'0',zoom:'100'};
+	$("#grid #shoppinglist").on('mouseenter',indata,hoverin).on('mouseleave',outdata2,hoverout).trigger('mouseleave');
 	
-	indata = {xoff:'60',yoff:'-10',zoom:'1.5',duration:'0.4'};
+	indata = {xoff:'50',yoff:'30',zoom:'150'};
 	$("#grid #hotorcold").on('mouseenter',indata,hoverin);
 	
-	indata = {xoff:'0',yoff:'0',zoom:'1.5',duration:'0.4'};
-	$("#grid #tssignals").on('mouseenter',indata,hoverin);
+	indata = {xoff:'50',yoff:'20',zoom:'150'};
+	outdata2 = {xoff:'50',yoff:'0',zoom:'100'};
+	$("#grid #tssignals").on('mouseenter',indata,hoverin).on('mouseleave',outdata2,hoverout).trigger('mouseleave');
 	
-	indata = {xoff:'0',yoff:'0',zoom:'1.5',duration:'0.4'};
-	var outdata2 = {xoff:'100',yoff:'0',zoom:'1.01',duration:'0.4'};
+	indata = {xoff:'50',yoff:'70',zoom:'150'};
+	outdata2 = {xoff:'50',yoff:'0',zoom:'100'};
 	$("#grid #googleclone").on('mouseenter',indata,hoverin).on('mouseleave',outdata2,hoverout).trigger('mouseleave');
 
 	// jQuery UI code for tooltips
