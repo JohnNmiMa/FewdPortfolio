@@ -66,23 +66,23 @@ body {
 			padding-bottom: 100%;
 		}
 			#grid #stockportfolio .imgContainer .image {
-				background-image: url('images/beach.jpg');
+				background-image: url('../images/beach.jpg');
 				/*background-position: 50%, 0;*/
 			}
 			#grid #quizalator .imgContainer .image {
-				background-image: url('images/redwoods.jpg');
+				background-image: url('../images/redwoods.jpg');
 			}
 			#grid #shoppinglist .imgContainer .image {
-				background-image: url('images/dog.jpg');
+				background-image: url('../images/dog.jpg');
 			}
 			#grid #hotorcold .imgContainer .image {
-				background-image: url('images/surfing.jpg');
+				background-image: url('../images/surfing.jpg');
 			}
 			#grid #tssignals .imgContainer .image {
-				background-image: url('images/cat.jpg');
+				background-image: url('../images/cat.jpg');
 			}
 			#grid #googleclone .imgContainer .image {
-				background-image: url('images/mountains.jpg');
+				background-image: url('../images/mountains.jpg');
 			}
 			#grid .proj .image {
 				position:absolute;
