@@ -2,110 +2,40 @@ body {
 	font-family: 'AvenirNext-Regular', Helvetica, sans-serif;
 }
 
-header {
-	font-size: 1.6rem;
-}
-
-	.top {
-		height: 30px;
-	}
-		.top ul {
-			float:right;
-		}
-		.top ul li {
-			display:inline-block;
-			width:25px;
-			height:25px;
-			line-height: 30px;
-			text-transform: uppercase;
-			font-size: 62.5%;
-			text-align:center;
-		}
-		.top ul li a {
-			text-decoration: none;
-			color:#444;
-		}
-		.top ul li a i {
-			font-size:1.2em;
-			opacity: 0.3;
-		}
-		.top ul li a i:hover {
-			font-size:1.4em;
-			opacity: 1;
-			color:#41b7d8;
-		}
-
-		.top ul li.mailButton {
-			margin-right:30px;
-		}
-
-
 	.container {
 		min-width:430px;
 		height:100%;
 	}
 	@media screen and (min-width: 0px) {
 		.container {
-			margin:0 auto;
+			margin:30px auto;
 			max-width:600px;
 		}
 	}
 	@media screen and (min-width: 600px) {
 		.container {
-			margin:0 5%;
+			margin:30px 5%;
 			max-width:100%;
 		}
 	}
 
-		.navigator {
-			margin: 45px 0 25px 0;
-			color:#444;
-			line-height:35px;
-		}
-			.name {
-				bottom:0;
-				font-family: 'AvenirNext-UltraLight', Helvetica, sans-serif;
-				font-size: 1.2em;
-				text-transform: uppercase;
-				text-decoration: none;
-				color:inherit;
-				vertical-align:middle;
-			}
-			.name:hover {
-				color:#41b7d8;
-			}
-				.name span {
-					font-family: 'AvenirNext-DemiBold', Helvetica, sans-serif;
-				}
-
-			ul.menu {
-				float:right;
-				font-size:0.55em;
-				font-weight:700;
-				text-transform: uppercase;
-			}
-				ul.menu li {
-					display:inline-block;
-					margin-left:12px;
-					line-height:35px;
-					vertical-align:middle;
-				}
-					ul.menu li a {
-						color:inherit;
-						text-decoration: none;
-					}
-					ul.menu li a:hover {
-						color:#41b7d8;
-					}
-
 	#work.content {
 	}
 
-		#work.content .title {
-			padding: 10px 15px 10px 23px;
-			border-left: 7px solid #eee;
-			margin: 40px -30px 30px -30px;
-			font-size:1.1em;
+		#work.content #log {
+			margin-bottom: 10px;
+			font-size:1.3em;
+			height:25px;
+		}
+		#work.content #imgSize {
+			margin-bottom: 10px;
+			font-size:1.3em;
+			height:25px;
+		}
+		#work.content #movePercent {
+			margin-bottom: 10px;
+			font-size:1.3em;
+			height:25px;
 		}
 
 		#grid {
@@ -147,25 +77,13 @@ header {
 			/*Man, I struggled with this. Adding the padding makes it all work!*/
 			padding-bottom: 100%;
 		}
-			#grid #stockportfolio .imgContainer .image {
-				background-image: url('images/stockportfolio.png');
+			#grid #image1 .imgContainer .image {
+				background-image: url('../images/beach.jpg');
+				/*background-image: url('images/stockportfolio.png');*/
 			}
-			#grid #quizalator .imgContainer .image {
-				background-image: url('images/quizalator.png');
-			}
-			#grid #shoppinglist .imgContainer .image {
-				background-image: url('images/shopping.png');
-			}
-			#grid #hotorcold .imgContainer .image {
-				background-image: url('images/hotorcold.png');
-			}
-			#grid #tssignals .imgContainer .image {
-				background-image: url('images/37signalsclone.png');
-				background-position:50% 0;
-			}
-			#grid #googleclone .imgContainer .image {
-				background-image: url('images/googleclone.png');
-				background-position:50% 0;
+			#grid #image2 .imgContainer .image {
+				background-image: url('../images/redwoods.jpg');
+				/*background-image: url('images/quizalator.png');*/
 			}
 			#grid .proj .image {
 				position:absolute;
@@ -175,8 +93,6 @@ header {
 				left:-1%;
 				background-repeat: no-repeat;
 				background-size: cover;
-				/* You also have to make the image slightly larger to
-				 * remove the right and bottom image border. */
 				width:102%;
 				height:102%;
 				-webkit-transition-property: background-position background-size;
