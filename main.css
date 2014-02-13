@@ -149,22 +149,22 @@ header {
 		section .grid .proj:hover {
 			/*transition: height .3 ease in;*/
 		}
-		@media only screen and (min-device-width: 0px) {
+		@media screen and (min-width: 0px) {
 			.proj {
 				width:100%;
 			}
 		}
-		@media only screen and (min-device-width: 600px) {
+		@media screen and (min-width: 600px) {
 			.proj {
 				width:50%;
 			}
 		}
-		@media only screen and (min-device-width: 900px) {
+		@media screen and (min-width: 900px) {
 			.proj {
 				width:33.33332%;
 			}
 		}
-		@media only screen and (min-device-width: 1200px) {
+		@media screen and (min-width: 1200px) {
 			.proj {
 				width:25%;
 			}
