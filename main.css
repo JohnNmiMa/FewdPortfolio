@@ -42,7 +42,7 @@ header {
 
 
 	.container {
-		min-width:430px;
+		/*min-width:430px;*/
 		height:100%;
 	}
 	@media screen and (min-width: 0px) {
@@ -105,8 +105,7 @@ header {
 		#work.content .title {
 			padding: 10px 15px 10px 23px;
 			border-left: 7px solid #eee;
-			/*border-top:1px solid #eee;*/
-			margin: 0 -30px 30px -30px;
+			margin: 0 0 30px -30px;
 		}
 		#work.content .title.thinkful {
 			font-size:1.5em;
