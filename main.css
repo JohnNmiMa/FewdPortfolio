@@ -156,16 +156,22 @@ header {
 		@media screen and (min-width: 600px) {
 			.proj {
 				width:50%;
+				width:48%;
+				border:5px solid #fff;
 			}
 		}
 		@media screen and (min-width: 900px) {
 			.proj {
 				width:33.33332%;
+				width:32%;
+				border:5px solid #fff;
 			}
 		}
 		@media screen and (min-width: 1200px) {
 			.proj {
 				width:25%;
+				width:24%;
+				border:5px solid #fff;
 			}
 		}
 
@@ -201,6 +207,14 @@ header {
 			}
 			section .grid #graphicsdevice .imgContainer .image {
 				background-image: url('images/visualizegraphics.jpg');
+			}
+			section .grid #spacer1 {
+				display:none;
+			}
+			@media screen and (min-width: 900px) {
+				section .grid #spacer1 {
+					display:block;
+				}
 			}
 			section .grid #x11 .imgContainer .image {
 				background-image: url('images/hpux-x11.png');
