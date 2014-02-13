@@ -73,39 +73,64 @@ $(document).ready(function() {
 	}
 	
 	// Initialize the ovelay window size to its parent/grid size
-	$("#grid .proj").mouseenter(function() {
+	$("div.grid .proj").mouseenter(function() {
 		imageAnimator.setOverlaySize.call($(this));
 	}).trigger('mouseenter');
 
 	// Center the overlay description
-	$('#grid .proj a .description').mouseenter(function() {
+	$('div.grid .proj a .description').mouseenter(function() {
 		imageAnimator.centerOverlayTitle.call($(this));
 	}).trigger('mouseenter');
 
 	// General image affine translation
-	$("#grid .proj").on('mouseleave',outdata,hoverout).trigger('mouseleave');
+	$("div.grid .proj").on('mouseleave',outdata,hoverout).trigger('mouseleave');
 
 	// Image specific affine translations
 	indata = {xoff:'0',yoff:'0',zoom:'150'};
-	$("#grid #stockportfolio").on('mouseenter',indata,hoverin);
+	$("div.grid #stockportfolio").on('mouseenter',indata,hoverin);
 
 	indata = {xoff:'50',yoff:'100',zoom:'150'};
-	$("#grid #quizalator").on('mouseenter',indata,hoverin);
+	$("div.grid #quizalator").on('mouseenter',indata,hoverin);
 
 	indata = {xoff:'0',yoff:'0',zoom:'100'};
 	outdata2 = {xoff:'93',yoff:'0',zoom:'100'};
-	$("#grid #shoppinglist").on('mouseenter',indata,hoverin).on('mouseleave',outdata2,hoverout).trigger('mouseleave');
+	$("div.grid #shoppinglist").on('mouseenter',indata,hoverin).on('mouseleave',outdata2,hoverout).trigger('mouseleave');
 	
 	indata = {xoff:'50',yoff:'30',zoom:'150'};
-	$("#grid #hotorcold").on('mouseenter',indata,hoverin);
+	outdata2 = {xoff:'50',yoff:'0',zoom:'100'};
+	$("div.grid #hotorcold").on('mouseenter',indata,hoverin).on('mouseleave',outdata2,hoverout).trigger('mouseleave');
 	
 	indata = {xoff:'50',yoff:'20',zoom:'150'};
 	outdata2 = {xoff:'50',yoff:'0',zoom:'100'};
-	$("#grid #tssignals").on('mouseenter',indata,hoverin).on('mouseleave',outdata2,hoverout).trigger('mouseleave');
+	$("div.grid #tssignals").on('mouseenter',indata,hoverin).on('mouseleave',outdata2,hoverout).trigger('mouseleave');
 	
 	indata = {xoff:'50',yoff:'70',zoom:'150'};
 	outdata2 = {xoff:'50',yoff:'0',zoom:'100'};
-	$("#grid #googleclone").on('mouseenter',indata,hoverin).on('mouseleave',outdata2,hoverout).trigger('mouseleave');
+	$("div.grid #googleclone").on('mouseenter',indata,hoverin).on('mouseleave',outdata2,hoverout).trigger('mouseleave');
+
+	indata = {xoff:'50',yoff:'0',zoom:'150'};
+	outdata2 = {xoff:'50',yoff:'0',zoom:'100'};
+	$("div.grid #rgs").on('mouseenter',indata,hoverin).on('mouseleave',outdata2,hoverout).trigger('mouseleave');
+
+	indata = {xoff:'100',yoff:'70',zoom:'150'};
+	outdata2 = {xoff:'100',yoff:'70',zoom:'100'};
+	$("div.grid #webos").on('mouseenter',indata,hoverin).on('mouseleave',outdata2,hoverout).trigger('mouseleave');
+
+	indata = {xoff:'50',yoff:'50',zoom:'150'};
+	outdata2 = {xoff:'50',yoff:'50',zoom:'100'};
+	$("div.grid #graphicsdevice").on('mouseenter',indata,hoverin).on('mouseleave',outdata2,hoverout).trigger('mouseleave');
+
+	indata = {xoff:'50',yoff:'100',zoom:'150'};
+	outdata2 = {xoff:'50',yoff:'50',zoom:'100'};
+	$("div.grid #x11").on('mouseenter',indata,hoverin).on('mouseleave',outdata2,hoverout).trigger('mouseleave');
+
+	indata = {xoff:'10',yoff:'0',zoom:'150'};
+	outdata2 = {xoff:'10',yoff:'20',zoom:'100'};
+	$("div.grid #seismicprocessing").on('mouseenter',indata,hoverin).on('mouseleave',outdata2,hoverout).trigger('mouseleave');
+
+	indata = {xoff:'0',yoff:'0',zoom:'150'};
+	outdata2 = {xoff:'0',yoff:'0',zoom:'100'};
+	$("div.grid #seismicacquisition").on('mouseenter',indata,hoverin).on('mouseleave',outdata2,hoverout).trigger('mouseleave');
 
 	// jQuery UI code for tooltips
 	$(document).tooltip();

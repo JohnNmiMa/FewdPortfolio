@@ -90,8 +90,5 @@ $(document).ready(function() {
 	indata = {xoff:'0',yoff:'0',zoom:'1.5',duration:'0.4'};
 	var outdata2 = {xoff:'100',yoff:'0',zoom:'1.01',duration:'0.3'};
 	$("#grid #googleclone").on('mouseenter',indata,hoverin).on('mouseleave',outdata2,hoverout).trigger('mouseleave');
-
-	// jQuery UI code for tooltips
-	$(document).tooltip();
 });
 
