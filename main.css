@@ -208,13 +208,9 @@ header {
 			section .grid #graphicsdevice .imgContainer .image {
 				background-image: url('images/visualizegraphics.jpg');
 			}
-			section .grid #spacer1 {
-				display:none;
-			}
+			section .grid #spacer1 { display:none; }
 			@media screen and (min-width: 900px) {
-				section .grid #spacer1 {
-					display:block;
-				}
+				section .grid #spacer1 { display:block; }
 			}
 			section .grid #x11 .imgContainer .image {
 				background-image: url('images/hpux-x11.png');
@@ -271,6 +267,10 @@ header {
 					color:#ccc;
 					-webkit-transition: font-size 0.2s ease-out;
 				}
+
+	#experience.content #experienceimage {
+		width:100%;
+	}
 
 /* Used to style the jQuery tooptip */
 .ui-tooltip {
