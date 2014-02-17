@@ -52,7 +52,7 @@ header {
 			max-width:600px;
 		}
 	}
-	@media screen and (min-width: 700px) {
+	@media screen and (min-width: 600px) {
 		.container {
 			margin:0 5% 2% 5%;
 			max-width:100%;
@@ -123,7 +123,7 @@ header {
 						vertical-align:middle;
 					}
 		}
-		@media screen and (min-width: 700px) {
+		@media screen and (min-width: 600px) {
 			.navigator {
 				/*margin: 45px 0 25px 0;*/
 				position:relative;
