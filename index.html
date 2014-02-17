@@ -2,6 +2,7 @@
 <html lang="en">
 	<head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 		<title>John Marks' Portfolio</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
 		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Muli">
 		<link href="css/smooth/jquery-ui-1.10.3.custom.css" rel="stylesheet">
 		<link type="text/css" rel="stylesheet" href="reset.css">
@@ -34,9 +35,9 @@
 				<div class="navigator">
 					<a class="name" href="#">John<span>Marks</span></a>
 					<ul class="menu" >
-						<li><a href="#">Work</a></li>
-						<li><a href="#">Experience</a></li>
-						<li><a href="#">Skills</a></li>
+						<li id="workbtn"><a href="#">Work</a></li>
+						<li id="expbtn"><a href="#">Experience</a></li>
+						<li id="skillsbtn"><a href="#">Skills</a></li>
 					</ul>
 				</div>
 			</section>
@@ -119,6 +120,13 @@
 							<h4>Website</h4> </div> </a>
 					<div class="imgContainer"> <img class="image wide" src> </div>
 				</div>
+				<div id="spacer1" class="proj">
+					<a class="overlay" href="">
+						<div class="description">
+							<h2></h2>
+							<h4></h4> </div> </a>
+					<div class="imgContainer"> <img class="image" src> </div>
+				</div>
 				<div id="x11" class="proj">
 					<a class="overlay" href="http://en.wikipedia.org/wiki/X_Window_System" target="_blank">
 						<div class="description">
@@ -148,6 +156,9 @@
 					<div class="imgContainer"> <img class="image wide" src> </div>
 				</div>
 			</div>
+		</section>
+		<section id="experience" class="container content">
+			<img id="experienceimage" src="images/experience.svg">
 		</section>
 	</body>
 </html>

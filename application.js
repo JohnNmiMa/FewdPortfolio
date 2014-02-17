@@ -132,6 +132,15 @@ $(document).ready(function() {
 	outdata2 = {xoff:'0',yoff:'0',zoom:'100'};
 	$("div.grid #seismicacquisition").on('mouseenter',indata,hoverin).on('mouseleave',outdata2,hoverout).trigger('mouseleave');
 
+	$("section .navigator #workbtn").click(function() {
+		$("section#experience").css('display', 'none');
+		$("section#work").css('display', 'block');
+	}).trigger('click');
+	$("section .navigator #expbtn").click(function() {
+		$("section#work").css('display', 'none');
+		$("section#experience").css('display', 'block');
+	});
+
 	// jQuery UI code for tooltips
 	$(document).tooltip();
 });
