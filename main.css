@@ -4,20 +4,21 @@ body {
 
 header {
 	font-size: 1.6rem;
-	margin-bottom:40px;
+	/*margin-bottom:40px;*/
 }
 
 	.top {
-		height: 30px;
+		height: 40px;
 	}
 		.top ul {
 			float:right;
+			padding-top:10px;
 		}
 		.top ul li {
 			display:inline-block;
-			width:25px;
-			height:25px;
-			line-height: 30px;
+			width:30px;
+			height:30px;
+			line-height: 35px;
 			text-transform: uppercase;
 			font-size: 62.5%;
 			text-align:center;
@@ -27,11 +28,11 @@ header {
 			color:#444;
 		}
 		.top ul li a i {
-			font-size:1.2em;
+			font-size:1.4em;
 			opacity: 0.3;
 		}
 		.top ul li a i:hover {
-			font-size:1.4em;
+			font-size:1.6em;
 			opacity: 1;
 			color:#41b7d8;
 		}
@@ -51,7 +52,7 @@ header {
 			max-width:600px;
 		}
 	}
-	@media screen and (min-width: 600px) {
+	@media screen and (min-width: 700px) {
 		.container {
 			margin:0 5% 2% 5%;
 			max-width:100%;
@@ -59,18 +60,17 @@ header {
 	}
 
 		.navigator {
-			margin: 45px 0 25px 0;
 			color:#444;
-			line-height:35px;
+			height:100%;
+			/*overflow: visible;*/
+			border-bottom: 0;
 		}
 			.name {
-				bottom:0;
 				font-family: 'AvenirNext-UltraLight', Helvetica, sans-serif;
 				font-size: 1.2em;
 				text-transform: uppercase;
 				text-decoration: none;
 				color:inherit;
-				vertical-align:middle;
 			}
 			.name:hover {
 				color:#41b7d8;
@@ -80,16 +80,19 @@ header {
 				}
 
 			ul.menu {
-				float:right;
-				font-size:0.55em;
-				font-weight:700;
 				text-transform: uppercase;
 			}
 				ul.menu li {
-					display:inline-block;
-					margin-left:12px;
 					line-height:35px;
-					vertical-align:middle;
+				}
+				ul.menu li#workbtn {
+					padding-right:6px;
+				}
+				ul.menu li#expbtn {
+					padding:0 6px;
+				}
+				ul.menu li#skillsbtn {
+					padding-left:6px;
 				}
 					ul.menu li a {
 						color:inherit;
@@ -98,6 +101,52 @@ header {
 					ul.menu li a:hover {
 						color:#41b7d8;
 					}
+
+		@media screen and (min-width: 0px) {
+			.navigator {
+				margin: 45px 0 25px 0;
+				text-align:center;
+			}
+				.name {
+					/*vertical-align:middle;*/
+				}
+
+				ul.menu {
+					/*display:block;*/
+					position:relative;
+					font-size:0.55em;
+					font-weight:700;
+				}
+					ul.menu li {
+						display:inline-block;
+						line-height:35px;
+						vertical-align:middle;
+					}
+		}
+		@media screen and (min-width: 700px) {
+			.navigator {
+				/*margin: 45px 0 25px 0;*/
+				position:relative;
+				text-align:left;
+			}
+				.name {
+					/*vertical-align:middle;*/
+				}
+
+				ul.menu {
+					/*display:inline-block;*/
+					/*position:absolute;*/
+					/*right:0;*/
+					float:right;
+					font-size:0.55em;
+					font-weight:700;
+				}
+					ul.menu li {
+						display:inline-block;
+						line-height:35px;
+						vertical-align:middle;
+					}
+		}
 
 	#work.content {
 	}
