@@ -261,6 +261,9 @@ header {
 			@media screen and (min-width: 900px) {
 				section .grid #spacer1 { display:block; }
 			}
+			@media screen and (min-width: 1200px) {
+				section .grid #spacer1 { display:none; }
+			}
 			section .grid #x11 .imgContainer .image {
 				background-image: url('images/hpux-x11.png');
 			}
