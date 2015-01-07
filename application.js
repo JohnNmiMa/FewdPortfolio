@@ -86,16 +86,47 @@ $(document).ready(function() {
 	$("div.grid .proj").on('mouseleave',outdata,hoverout).trigger('mouseleave');
 
 	// Image specific affine translations
+	indata = {xoff:'30',yoff:'0',zoom:'130'};
+	outdata2 = {xoff:'0',yoff:'0',zoom:'100'};
+	$("div.grid #somecode").on('mouseenter',indata,hoverin).on('mouseleave',outdata2,hoverout).trigger('mouseleave');
+
+	indata = {xoff:'50',yoff:'100',zoom:'150'};
+	$("div.grid #photobrowser").on('mouseenter',indata,hoverin);
+
+	indata = {xoff:'80',yoff:'20',zoom:'125'};
+	outdata2 = {xoff:'0',yoff:'0',zoom:'125'};
+	$("div.grid #countriescapitals").on('mouseenter',indata,hoverin).on('mouseleave',outdata2,hoverout).trigger('mouseleave');
+
+	indata = {xoff:'55',yoff:'40',zoom:'120'};
+	outdata2 = {xoff:'0',yoff:'0',zoom:'85'};
+	$("div.grid #waitstaffcalc").on('mouseenter',indata,hoverin).on('mouseleave',outdata2,hoverout).trigger('mouseleave');
+
+	indata = {xoff:'50',yoff:'0',zoom:'140'};
+	outdata2 = {xoff:'0',yoff:'0',zoom:'80'};
+	$("div.grid #calendardirective").on('mouseenter',indata,hoverin).on('mouseleave',outdata2,hoverout).trigger('mouseleave');
+
+	indata = {xoff:'80',yoff:'20',zoom:'150'};
+	$("div.grid #codemirrortextarea").on('mouseenter',indata,hoverin);
+
+	indata = {xoff:'90',yoff:'0',zoom:'110'};
+	outdata2 = {xoff:'0',yoff:'0',zoom:'70'};
+	$("div.grid #ngmadlibs").on('mouseenter',indata,hoverin).on('mouseleave',outdata2,hoverout).trigger('mouseleave');
+
 	indata = {xoff:'0',yoff:'0',zoom:'150'};
 	$("div.grid #stockportfolio").on('mouseenter',indata,hoverin);
 
-	indata = {xoff:'50',yoff:'100',zoom:'150'};
-	$("div.grid #quizalator").on('mouseenter',indata,hoverin);
+	indata = {xoff:'0',yoff:'0',zoom:'150'};
+	outdata2 = {xoff:'0',yoff:'0',zoom:'70'};
+	$("div.grid #quizalator").on('mouseenter',indata,hoverin).on('mouseleave',outdata2,hoverout).trigger('mouseleave');
 
-	indata = {xoff:'0',yoff:'0',zoom:'100'};
-	outdata2 = {xoff:'93',yoff:'0',zoom:'100'};
-	$("div.grid #shoppinglist").on('mouseenter',indata,hoverin).on('mouseleave',outdata2,hoverout).trigger('mouseleave');
-	
+	indata = {xoff:'93',yoff:'50',zoom:'140'};
+	outdata2 = {xoff:'50',yoff:'0',zoom:'90'};
+	$("div.grid #valentine").on('mouseenter',indata,hoverin).on('mouseleave',outdata2,hoverout).trigger('mouseleave');
+
+	indata = {xoff:'0',yoff:'70',zoom:'110'};
+	outdata2 = {xoff:'0',yoff:'0',zoom:'100'};
+	$("div.grid #pamsdoterra").on('mouseenter',indata,hoverin).on('mouseleave',outdata2,hoverout).trigger('mouseleave');
+
 	indata = {xoff:'50',yoff:'30',zoom:'150'};
 	outdata2 = {xoff:'50',yoff:'0',zoom:'100'};
 	$("div.grid #hotorcold").on('mouseenter',indata,hoverin).on('mouseleave',outdata2,hoverout).trigger('mouseleave');

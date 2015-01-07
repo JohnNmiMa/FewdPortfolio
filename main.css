@@ -230,15 +230,39 @@ header {
 			/*Man, I struggled with this. Adding the padding makes it all work!*/
 			padding-bottom: 100%;
 		}
+            section .grid #somecode .imgContainer .image {
+                background-image: url('images/somecode.png');
+            }
+            section .grid #photobrowser .imgContainer .image {
+                background-image: url('images/photobrowser.png');
+            }
+            section .grid #countriescapitals .imgContainer .image {
+                background-image: url('images/countriescapitals.png');
+            }
+            section .grid #waitstaffcalc .imgContainer .image {
+                background-image: url('images/waitstaffcalc.png');
+            }
+            section .grid #calendardirective .imgContainer .image {
+                background-image: url('images/calendardirective.png');
+            }
+            section .grid #codemirrortextarea .imgContainer .image {
+                background-image: url('images/codemirrortextarea.png');
+            }
+            section .grid #ngmadlibs .imgContainer .image {
+                background-image: url('images/ngmadlibs.png');
+            }
 			section .grid #stockportfolio .imgContainer .image {
 				background-image: url('images/stockportfolio.png');
 			}
 			section .grid #quizalator .imgContainer .image {
 				background-image: url('images/quizalator.png');
 			}
-			section .grid #shoppinglist .imgContainer .image {
-				background-image: url('images/shopping.png');
+			section .grid #valentine .imgContainer .image {
+				background-image: url('images/valentine.png');
 			}
+            section .grid #pamsdoterra .imgContainer .image {
+                background-image: url('images/pamsdoterra.png');
+            }
 			section .grid #hotorcold .imgContainer .image {
 				background-image: url('images/hotorcold.png');
 			}
