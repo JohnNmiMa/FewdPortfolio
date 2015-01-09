@@ -18,7 +18,7 @@ var imageAnimator = (function() {
 	var displayOverlay = function(display) {
 		if (display) {
 			// Make the overlay visible and darken the background
-			this.css("background-color", "rgba(0,0,0, 0.6)");
+			this.css("background-color", "rgba(0,0,0, 0.5)");
 			this.css('visibility', 'visible');
 		} else {
 			// Make the overlay hidden and brighten the background
@@ -90,10 +90,10 @@ $(document).ready(function() {
 	outdata2 = {xoff:'0',yoff:'0',zoom:'100'};
 	$("div.grid #somecode").on('mouseenter',indata,hoverin).on('mouseleave',outdata2,hoverout).trigger('mouseleave');
 
-	indata = {xoff:'50',yoff:'100',zoom:'150'};
+	indata = {xoff:'50',yoff:'95',zoom:'140'};
 	$("div.grid #photobrowser").on('mouseenter',indata,hoverin);
 
-	indata = {xoff:'80',yoff:'20',zoom:'125'};
+	indata = {xoff:'90',yoff:'35',zoom:'125'};
 	outdata2 = {xoff:'0',yoff:'0',zoom:'125'};
 	$("div.grid #countriescapitals").on('mouseenter',indata,hoverin).on('mouseleave',outdata2,hoverout).trigger('mouseleave');
 
@@ -101,7 +101,7 @@ $(document).ready(function() {
 	outdata2 = {xoff:'0',yoff:'0',zoom:'85'};
 	$("div.grid #waitstaffcalc").on('mouseenter',indata,hoverin).on('mouseleave',outdata2,hoverout).trigger('mouseleave');
 
-	indata = {xoff:'50',yoff:'0',zoom:'140'};
+	indata = {xoff:'50',yoff:'20',zoom:'150'};
 	outdata2 = {xoff:'0',yoff:'0',zoom:'80'};
 	$("div.grid #calendardirective").on('mouseenter',indata,hoverin).on('mouseleave',outdata2,hoverout).trigger('mouseleave');
 
@@ -115,12 +115,12 @@ $(document).ready(function() {
 	indata = {xoff:'0',yoff:'0',zoom:'150'};
 	$("div.grid #stockportfolio").on('mouseenter',indata,hoverin);
 
-	indata = {xoff:'0',yoff:'0',zoom:'150'};
+	indata = {xoff:'0',yoff:'0',zoom:'120'};
 	outdata2 = {xoff:'0',yoff:'0',zoom:'70'};
 	$("div.grid #quizalator").on('mouseenter',indata,hoverin).on('mouseleave',outdata2,hoverout).trigger('mouseleave');
 
 	indata = {xoff:'93',yoff:'50',zoom:'140'};
-	outdata2 = {xoff:'50',yoff:'0',zoom:'90'};
+	outdata2 = {xoff:'50',yoff:'0',zoom:'95'};
 	$("div.grid #valentine").on('mouseenter',indata,hoverin).on('mouseleave',outdata2,hoverout).trigger('mouseleave');
 
 	indata = {xoff:'0',yoff:'70',zoom:'110'};

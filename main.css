@@ -310,7 +310,7 @@ header {
 				width:102%;
 				height:102%;
 				-webkit-transition-property: background-position background-size;
-				-webkit-transition-duration: 0.4s;
+				-webkit-transition-duration: 0.25s;
 				-webkit-transition-timing-function: ease-out;
 			}
 
@@ -322,7 +322,7 @@ header {
 			text-decoration: none;
 			visibility:hidden;
 			background-color: rgba(0,0,0, 0);
-			-webkit-transition: background-color 0.4s ease-out;
+			-webkit-transition: background-color 0.2s ease-out;
 		}
 
 			section .grid .proj a.overlay .description {
