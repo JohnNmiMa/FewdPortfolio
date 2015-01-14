@@ -171,8 +171,5 @@ $(document).ready(function() {
 		$("section#work").css('display', 'none');
 		$("section#experience").css('display', 'block');
 	});
-
-	// jQuery UI code for tooltips
-	$(document).tooltip();
 });
 
